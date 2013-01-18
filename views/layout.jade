@@ -2,6 +2,41 @@ doctype 5
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/css/custom.css')
   body
-    block content
+  .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='#')=title
+          .nav-collapse.collapse
+            p.navbar-text.pull-right 
+              a.navbar-link(href='#') My Account
+            ul.nav
+              li.active
+                a(href='#') Navigation Item # 1
+              li
+                a(href='#about') Navigation Item # 2
+              li
+                a(href='#contact') Navigation Item # 3
+          //
+            /.nav-collapse 
+    .container-fluid
+      .row-fluid
+
+            block content
+
+      hr
+
+      footer
+        p Copyright 2013. All rights reserved.
+    //
+      /.fluid-container
+
+    script(src="/js/jquery-1.9.0.min.js")
+    script(src="/js/bootstrap.min.js")
